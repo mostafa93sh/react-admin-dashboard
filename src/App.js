@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import TobBar from "./scenes/global/TobBar";
 import Sidebar from "./scenes/global/SideBar";
+import Dashboard from "./scenes/dashboard";
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -19,7 +20,7 @@ function App() {
             <TobBar />
 
             <Routes>
-              <Route path='/' />
+              <Route path='/' element={<Dashboard />} />
             </Routes>
           </main>
         </div>
